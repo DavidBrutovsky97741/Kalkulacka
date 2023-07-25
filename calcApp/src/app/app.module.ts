@@ -5,8 +5,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FieldComponent } from './field/field.component';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 import { MatSliderModule } from '@angular/material/slider';
+
+import {FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,8 +19,9 @@ import { MatSliderModule } from '@angular/material/slider';
   ],
   imports: [
     BrowserModule,    
-    BrowserAnimationsModule,
-    MatSliderModule
+    NoopAnimationsModule,
+    MatSliderModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

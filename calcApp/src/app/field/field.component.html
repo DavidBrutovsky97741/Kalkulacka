@@ -1,6 +1,11 @@
-<br><label for="lname">Last name:</label><br>
-<input type="number" id="lname" name="lname" disabled>
+<div class="field">
+
+<label for="lname">{{ name }}</label><br>
+<input type="text" class="inputPanel" id="lname" name="lname" [value]="sliderValue + ' ' + unit">
 <img class="infoImg" src="/assets/images/info.png" alt="info"><br>
 
-<mat-slider ></mat-slider>
+<input class="range-slider_input" type="range" [(ngModel)]="sliderValue" [min]="min" [max]="max">
 
+<br>
+
+</div>
