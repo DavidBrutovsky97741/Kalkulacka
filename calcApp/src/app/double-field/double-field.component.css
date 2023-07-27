@@ -1,0 +1,50 @@
+.infoImg{
+    width: 1vh;
+    height: auto;
+    padding-left: 1vh;
+}
+
+input{
+    height: 2vh;
+    width: 35%;
+    margin-left: 1vh;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.inputPanel{
+    text-align: right;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 80%;
+    height: 3px; 
+    background-color: gray; 
+    outline: none;
+  }
+  
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1vh;
+    height: 1vh;
+    background-color: white; 
+    border: 2px solid darkblue; 
+    border-radius: 50%; 
+  }
+
+  .field{
+    border: 1px solid black;
+    margin: 1vh;
+    padding: 1vh;
+    width: 20%;
+}
+  
+ 
+

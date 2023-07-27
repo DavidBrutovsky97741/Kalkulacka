@@ -1,0 +1,26 @@
+li:nth-of-type(odd){
+    color: #fbc910;
+  }
+  
+li:nth-of-type(even){
+    color: #302841;
+  }
+
+.pieChart{
+    display: flex;
+    width: 100vh;
+}
+
+.customLegend{
+    display: flex;
+    margin-left: 3vh;
+    align-items: center;
+    font-size: large;
+    width: max-content;
+}
+
+.customLegend li{
+    padding: 1%;
+}
+
+  

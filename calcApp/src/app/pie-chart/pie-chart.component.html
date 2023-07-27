@@ -1,0 +1,26 @@
+<div class="pieChart">
+    <div class="pie">
+
+        <table>
+            <tr>
+                <td>
+                    <ngx-charts-pie-chart id="chart-container" [results]="productSales" [view]="view" [doughnut]="true"
+                        [customColors]="barChartcustomColors" [arcWidth]="arcWidth"
+                        [labels]="true" [labelFormatting]="labelFormat"></ngx-charts-pie-chart>
+                   
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="customLegend">
+
+        <ul>
+            <li id="CZ">čistý zisk <span></span></li>
+            <li id="KIP">kumulatív investovaných peňazí <span></span></li>
+        </ul>
+
+    </div>
+
+</div>

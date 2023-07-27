@@ -1,13 +1,22 @@
 
-<app-field name="Ročný výnos" [min]="0" [max]="10" unit="%"></app-field>
+<app-field id="RV" name="Ročný výnos" [min]="0" [max]="10000" unit="%"
+  (valueChange)="onFieldValueChange($event, 'RV')"></app-field>
 
-<app-field name="Finančný cieľ" [min]="0" [max]="1000000" unit="€"></app-field>
+<app-field name="Finančný cieľ" [min]="0" [max]="1000000" unit="€"
+(valueChange)="onFieldValueChange($event, 'FC') "></app-field>
 
-<app-field name="Aktuálny stav úspor" [min]="0" [max]="1000000" unit="€"></app-field>
+<app-field name="Aktuálny stav úspor" [min]="0" [max]="1000000" unit="€"
+(valueChange)="onFieldValueChange($event, 'AS') "></app-field>
 
-<app-field name="Dľžka sporenia" [min]="0" [max]="30" unit="d"></app-field>
+<app-double-field name="Dlžka sporenia" [min]="0" [max]="360"
+(valueChange)="onFieldValueChange($event, 'DS') "></app-double-field> <!-- min/max - v mesiachoch -->
+ 
+<app-field name="Mesačný vklad" [min]="0" [max]="10000" unit="€"
+(valueChange)="onFieldValueChange($event, 'MV') "></app-field>
 
-<app-field name="Mesačný vklad" [min]="0" [max]="10000" unit="€"></app-field>
 
 
+<!-- <app-bar-charts></app-bar-charts> -->
+
+<app-pie-chart></app-pie-chart>
 

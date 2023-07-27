@@ -1,0 +1,17 @@
+<!-- double-field.component.html -->
+<div class="field">
+
+    <!-- Display years and months -->
+    <label for="lname">{{ name }}</label><br>
+    <input type="text" class="inputPanel" id="lname" name="lname" [value]="getYearsAndMonths().years + ' ' + 'rok.'" disabled>
+    <input type="text" class="inputPanel" id="lname" name="lname" [value]="getYearsAndMonths().months + ' ' + 'mes.'" disabled>
+  
+    <img class="infoImg" src="/assets/images/info.png" alt="info"><br>
+  
+    <!-- Use maxMonths as the maximum value for the range slider -->
+    <input class="range-slider_input" type="range" [(ngModel)]="sliderValue" [min]="min" [max]="max" (input)="onValueChange()">
+  
+    <br>
+  
+  </div>
+  

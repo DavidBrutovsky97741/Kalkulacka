@@ -1,10 +1,10 @@
 <div class="field">
 
 <label for="lname">{{ name }}</label><br>
-<input type="text" class="inputPanel" id="lname" name="lname" [value]="sliderValue + ' ' + unit">
+<input type="text" class="inputPanel" id="lname" name="lname" [value]="sliderValue + ' ' + unit" disabled>
 <img class="infoImg" src="/assets/images/info.png" alt="info"><br>
 
-<input class="range-slider_input" type="range" [(ngModel)]="sliderValue" [min]="min" [max]="max">
+<input class="range-slider_input" type="range" [(ngModel)]="sliderValue" [min]="min" [max]="max" (input)="onValueChange()">
 
 <br>
 
