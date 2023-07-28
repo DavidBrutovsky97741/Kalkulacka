@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-import { BarChartsComponent } from '../app/bar-charts/bar-charts.component';
 import { PieChartComponent } from '../app/pie-chart/pie-chart.component';
+
 
 @Component({
   selector: 'app-root',
@@ -10,14 +10,14 @@ import { PieChartComponent } from '../app/pie-chart/pie-chart.component';
 export class AppComponent {
   title = 'calcApp';
 
-  @ViewChild(BarChartsComponent) barChartsComponent!: BarChartsComponent;
+
   @ViewChild(PieChartComponent) pieChartComponent!: PieChartComponent;
 
 
 
   onFieldValueChange(value: number, id: string) {
 
-    console.log('das');
+
 
     if(id=="RV"){
       productSales[0].value = value;
@@ -28,18 +28,17 @@ export class AppComponent {
     }
 
     else if(id=="AS"){
-      productSales[3].value = value;
+      productSales[2].value = value;
     }
 
     else if(id=="DS"){
-      productSales[4].value = value;
+      productSales[3].value = value;
     }
 
     else if(id=="MV"){
-      productSales[5].value = value;
+      productSales[4].value = value;
     }
 
-    this.barChartsComponent.update(productSales);
     this.pieChartComponent.update(productSales);
   }
 }
@@ -58,11 +57,11 @@ var productSales = [
   },
   {
     "name": "Dĺžka sporenia",
-    "value": 100
+    "value": 0
   },
   {
     "name": "Mesačný vklad",
-    "value": 100
+    "value": 0
   }
 ];
 

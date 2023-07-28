@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-pie-chart',
@@ -11,13 +11,15 @@ export class PieChartComponent implements OnInit {
   view: any[number] = [300, 300];
   arcWidth: number = 0.5;
   counter: number = 0; 
+  KIS: number = 0;
+  CZ: number = 0;
 
   barChartcustomColors = [
     { name: "Kumulatív investovaných peňazí", value: '#302841' },
     { name: "Čisltý zisk", value: '#fbc910' }
   ];
 
-  constructor() {
+  constructor(private cdr: ChangeDetectorRef) {
     Object.assign(this, { productSales });
   }
 
@@ -26,8 +28,14 @@ export class PieChartComponent implements OnInit {
   }
 
   update(updatedProductSales: any[]): void {
-    this.productSales = updatedProductSales;
-    console.log(this.productSales);
+    this.CZ = (((updatedProductSales[3].value)*(updatedProductSales[4].value)/12)*((updatedProductSales[0].value/10)+1));
+    this.productSales[0].value = this.CZ;
+    this.KIS = (updatedProductSales[3].value)*(updatedProductSales[4].value);
+    this.productSales[1].value = this.KIS;
+
+    this.cdr.markForCheck();
+    
+    //console.log(this.productSales);
     // Trigger change detection to update the view with new data
   }
 

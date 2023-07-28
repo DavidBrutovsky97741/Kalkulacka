@@ -13,16 +13,16 @@ import {FormsModule } from '@angular/forms';
 import { DoubleFieldComponent } from './double-field/double-field.component';
 
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { BarChartsComponent } from './bar-charts/bar-charts.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { LineChartComponent } from './line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FieldComponent,
     DoubleFieldComponent,
-    BarChartsComponent,
-    PieChartComponent
+    PieChartComponent,
+    LineChartComponent
 
   ],
   imports: [

@@ -39,10 +39,9 @@ input[type="range"] {
   }
 
   .field{
-    border: 1px solid black;
     margin: 1vh;
     padding: 1vh;
-    width: 20%;
+    width: 30vh;
 }
   
  

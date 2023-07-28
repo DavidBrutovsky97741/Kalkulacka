@@ -1,0 +1,8 @@
+.inputs{
+display: flex;
+width: 70%;
+margin-left: 15%;
+justify-content: center;
+gap: 3vh;
+flex-wrap: wrap;
+}
